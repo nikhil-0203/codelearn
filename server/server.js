@@ -14,7 +14,6 @@ import enrollmentRoutes   from "./routes/enrollmentRoutes.js";
 import paymentRoutes      from "./routes/paymentRoutes.js";
 import progressRoutes     from "./routes/progressRoutes.js";
 import announcementRoutes from "./routes/announcementRoutes.js";
-import commentRoutes      from "./routes/commentRoutes.js";
 
 dotenv.config();
 
@@ -26,7 +25,7 @@ const __dirname  = path.dirname(__filename);
 // ── CORS ──────────────────────────────────────────────────────────
 const allowedOrigins = [
   "http://localhost:3000",
-  process.env.CLIENT_URL, // set this on Render to your Vercel URL
+  process.env.CLIENT_URL,
 ].filter(Boolean);
 
 app.use(cors({
@@ -54,7 +53,6 @@ app.use("/api/enrollment",    enrollmentRoutes);
 app.use("/api/payment",       paymentRoutes);
 app.use("/api/progress",      progressRoutes);
 app.use("/api/announcements", announcementRoutes);
-app.use("/api/comments",      commentRoutes);
 
 // ── DATABASE + SERVER ─────────────────────────────────────────────
 mongoose
