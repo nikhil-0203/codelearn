@@ -1,0 +1,44 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(30, 41, 59, 0.7); /* Deep slate with transparency */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: white;
+  padding: 40px;
+  border-radius: var(--radius);
+  max-width: 500px;
+  width: 90%;
+  box-shadow: var(--shadow);
+}
+
+.modal-content h2 {
+  margin-bottom: 20px;
+  color: var(--text-main);
+}
+
+.modal-body p {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.close-modal-btn {
+  width: 100%;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 20px;
+}

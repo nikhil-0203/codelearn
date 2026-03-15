@@ -1,0 +1,194 @@
+/* ── Page ── */
+.courses-page { min-height: 100vh; background: var(--bg-main); }
+
+/* ── Hero ── */
+.courses-hero {
+  background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 60%, #3b82f6 100%);
+  padding: 64px 20px 80px; text-align: center; position: relative; overflow: hidden;
+}
+.courses-hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/svg%3E");
+}
+.hero-inner { position: relative; max-width: 640px; margin: 0 auto; }
+.hero-badge { display: inline-block; background: rgba(255,255,255,0.15); color: #bfdbfe; padding: 6px 16px; border-radius: 20px; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.5px; margin-bottom: 16px; }
+.courses-hero h1 { font-size: 2.6rem; font-weight: 800; color: #fff; margin-bottom: 10px; line-height: 1.2; }
+.courses-hero p { color: #bfdbfe; font-size: 1.05rem; margin-bottom: 28px; }
+
+/* Hero search */
+.hero-search {
+  display: flex; align-items: center; background: white; border-radius: 14px;
+  padding: 0 16px; height: 54px; box-shadow: 0 8px 30px rgba(0,0,0,0.18);
+  position: relative;
+}
+.search-icon-hero { font-size: 1rem; margin-right: 10px; flex-shrink: 0; }
+.hero-search input {
+  flex: 1; border: none; outline: none;
+  font-size: 1rem; color: var(--text-main); font-family: 'Inter', sans-serif;
+}
+.search-clear {
+  background: #f1f5f9; border: none; color: #64748b;
+  width: 24px; height: 24px; border-radius: 50%; font-size: 0.7rem;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; transition: all 0.15s;
+}
+.search-clear:hover { background: #e2e8f0; color: #1e293b; }
+
+/* Quick stats */
+.hero-quick-stats {
+  display: flex; justify-content: center; gap: 24px;
+  margin-top: 18px; flex-wrap: wrap;
+}
+.hero-quick-stats span { color: rgba(255,255,255,0.75); font-size: 0.82rem; font-weight: 600; }
+
+/* ── Body ── */
+.courses-body { max-width: 1260px; margin: 0 auto; padding: 36px 24px 60px; }
+
+/* ── Filter toolbar ── */
+.filter-toolbar {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 16px; margin-bottom: 16px; flex-wrap: wrap;
+}
+.category-tabs { display: flex; gap: 8px; flex-wrap: wrap; }
+.cat-tab {
+  padding: 8px 20px; border-radius: 22px;
+  border: 1.5px solid var(--border); background: white;
+  color: var(--text-muted); font-weight: 600; font-size: 0.88rem;
+  cursor: pointer; transition: all 0.18s;
+}
+.cat-tab:hover { border-color: var(--primary); color: var(--primary); }
+.cat-tab.active { background: var(--primary); color: white; border-color: var(--primary); }
+
+.toolbar-right { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.adv-filter-btn {
+  display: flex; align-items: center; gap: 6px;
+  padding: 8px 16px; border-radius: 10px;
+  border: 1.5px solid var(--border); background: white;
+  color: var(--text-muted); font-weight: 600; font-size: 0.88rem;
+  cursor: pointer; transition: all 0.18s;
+}
+.adv-filter-btn:hover, .adv-filter-btn.open { border-color: var(--primary); color: var(--primary); background: #eff6ff; }
+.filter-badge {
+  background: var(--primary); color: white;
+  width: 18px; height: 18px; border-radius: 50%;
+  font-size: 0.68rem; display: flex; align-items: center; justify-content: center;
+}
+.sort-select {
+  padding: 8px 14px; border-radius: 10px;
+  border: 1.5px solid var(--border); background: white;
+  color: var(--text-main); font-weight: 600; font-size: 0.88rem;
+  cursor: pointer; outline: none;
+}
+.results-count { font-size: 0.85rem; color: var(--text-muted); font-weight: 500; white-space: nowrap; }
+
+/* ── Advanced filters panel ── */
+.adv-filters-panel {
+  background: white; border: 1.5px solid var(--border);
+  border-radius: 14px; padding: 20px 24px;
+  display: flex; align-items: flex-start; gap: 32px;
+  margin-bottom: 16px; flex-wrap: wrap;
+  animation: slideDown 0.2s ease;
+}
+@keyframes slideDown { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: translateY(0); } }
+.afp-group { display: flex; flex-direction: column; gap: 10px; }
+.afp-group label { font-size: 0.75rem; font-weight: 700; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; }
+.afp-pills { display: flex; gap: 7px; flex-wrap: wrap; }
+.afp-pill {
+  padding: 6px 16px; border-radius: 20px;
+  border: 1.5px solid var(--border); background: white;
+  color: var(--text-muted); font-size: 0.82rem; font-weight: 600;
+  cursor: pointer; transition: all 0.15s;
+}
+.afp-pill:hover { border-color: var(--primary); color: var(--primary); }
+.afp-pill.active { background: var(--primary); color: white; border-color: var(--primary); }
+.clear-filters-btn {
+  margin-left: auto; align-self: center;
+  padding: 8px 16px; border-radius: 8px;
+  border: 1.5px solid #fecdd3; background: #fff1f2;
+  color: #e11d48; font-size: 0.82rem; font-weight: 700;
+  cursor: pointer; transition: all 0.15s; white-space: nowrap;
+}
+.clear-filters-btn:hover { background: #e11d48; color: white; }
+
+/* ── Active chips ── */
+.active-chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; align-items: center; }
+.chip {
+  display: flex; align-items: center; gap: 6px;
+  background: #eff6ff; color: #2563eb;
+  padding: 5px 12px; border-radius: 20px;
+  font-size: 0.8rem; font-weight: 600; border: 1px solid #bfdbfe;
+}
+.chip button {
+  background: none; border: none; color: #93c5fd;
+  cursor: pointer; font-size: 0.7rem; padding: 0; line-height: 1;
+  transition: color 0.15s;
+}
+.chip button:hover { color: #2563eb; }
+.chip-clear { background: #f1f5f9; color: #64748b; border-color: var(--border); }
+
+/* ── Skeleton loading ── */
+.courses-loading { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 28px; }
+.skeleton-card {
+  height: 340px; border-radius: 16px;
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+@keyframes shimmer { 0%{background-position:200% 0} 100%{background-position:-200% 0} }
+
+/* ── Grid & Cards ── */
+.student-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 28px; }
+.student-card {
+  background: white; border-radius: 16px; overflow: hidden;
+  border: 1px solid var(--border); transition: transform 0.25s, box-shadow 0.25s;
+  display: flex; flex-direction: column;
+}
+.student-card:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(37,99,235,0.1); }
+.card-image-wrapper { position: relative; height: 180px; overflow: hidden; }
+.course-img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease; }
+.student-card:hover .course-img { transform: scale(1.06); }
+.course-img-placeholder {
+  height: 100%; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+  color: white; font-weight: 800; font-size: 2rem; letter-spacing: 2px;
+}
+.card-img-overlay {
+  position: absolute; inset: 0; background: rgba(37,99,235,0.7);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; transition: opacity 0.25s;
+}
+.student-card:hover .card-img-overlay { opacity: 1; }
+.overlay-view-btn { color: white; font-weight: 700; font-size: 1rem; border: 2px solid rgba(255,255,255,0.7); padding: 8px 22px; border-radius: 8px; }
+.card-tags { position: absolute; bottom: 10px; left: 10px; display: flex; gap: 6px; }
+.lang-tag { background: white; color: var(--primary); padding: 3px 10px; border-radius: 6px; font-size: 0.72rem; font-weight: 800; box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+.access-tag { padding: 3px 10px; border-radius: 6px; font-size: 0.72rem; font-weight: 800; }
+.access-tag.access-paid { background: #fef3c7; color: #92400e; }
+.access-tag.access-approval { background: #f0fdf4; color: #166534; }
+
+.card-content { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+.card-meta { display: flex; align-items: center; gap: 6px; margin-bottom: 10px; flex-wrap: wrap; }
+.level-badge-small { font-size: 0.68rem; text-transform: uppercase; font-weight: 700; color: var(--primary); letter-spacing: 0.5px; }
+.cat-badge-small { font-size: 0.68rem; font-weight: 600; background: #f1f5f9; color: var(--text-muted); padding: 2px 8px; border-radius: 4px; }
+.access-badge-small { font-size: 0.68rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; }
+.access-badge-small.access-free     { background: #dcfce7; color: #166534; }
+.access-badge-small.access-paid     { background: #fef3c7; color: #92400e; }
+.access-badge-small.access-approval { background: #ede9fe; color: #5b21b6; }
+.card-content h3 { font-size: 1rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px; line-height: 1.4; }
+.card-content p  { color: var(--text-muted); font-size: 0.88rem; line-height: 1.55; flex: 1; }
+.card-footer { margin-top: 16px; }
+.enroll-btn { display: block; text-align: center; background: var(--primary); color: white; padding: 11px; border-radius: 10px; text-decoration: none; font-weight: 600; font-size: 0.9rem; transition: all 0.18s; }
+.enroll-btn:hover { background: #1d4ed8; transform: translateY(-1px); }
+
+/* ── Empty ── */
+.empty-results { grid-column: 1/-1; text-align: center; padding: 80px 20px; }
+.empty-icon { font-size: 3rem; margin-bottom: 14px; }
+.empty-results h3 { font-size: 1.2rem; font-weight: 700; color: var(--text-main); margin-bottom: 8px; }
+.empty-results p { color: var(--text-muted); margin-bottom: 20px; }
+.empty-clear-btn { padding: 10px 22px; border-radius: 9px; background: var(--primary); color: white; border: none; font-weight: 700; font-size: 0.9rem; cursor: pointer; transition: background 0.15s; }
+.empty-clear-btn:hover { background: #1d4ed8; }
+
+@media (max-width: 640px) {
+  .courses-hero h1 { font-size: 1.8rem; }
+  .filter-toolbar { flex-direction: column; align-items: flex-start; }
+  .toolbar-right { width: 100%; }
+}

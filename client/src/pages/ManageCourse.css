@@ -1,0 +1,278 @@
+.mc-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.mc-back-btn {
+  background: none;
+  border: none;
+  color: #2563eb;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 8px;
+  display: block;
+}
+.mc-back-btn:hover { text-decoration: underline; }
+
+.mc-title {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 4px 0;
+}
+.mc-subtitle { color: #64748b; font-size: 0.9rem; margin: 0; }
+
+.mc-add-module-btn {
+  background: #2563eb;
+  color: white;
+  padding: 11px 22px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 0.88rem;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.mc-add-module-btn:hover { background: #1d4ed8; }
+
+/* Inline forms */
+.mc-inline-form {
+  background: #eff6ff;
+  border: 1.5px solid #bfdbfe;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin-bottom: 24px;
+}
+.mc-inline-form h3 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e40af;
+  margin: 0 0 14px;
+}
+.mc-lesson-form {
+  background: #f0fdf4;
+  border-top: 1.5px solid #bbf7d0;
+  padding: 18px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.mc-form-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.mc-input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1.5px solid #e2e8f0;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  background: white;
+  min-width: 0;
+}
+.mc-input:focus { outline: none; border-color: #2563eb; }
+.mc-input-sm { flex: 0 0 90px; }
+
+.mc-save-btn {
+  background: #2563eb;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s;
+}
+.mc-save-btn:hover:not(:disabled) { background: #1d4ed8; }
+.mc-save-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.mc-pdf-label {
+  font-size: 0.85rem;
+  color: #475569;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+.mc-file-input { font-size: 0.82rem; }
+
+/* Empty state */
+.mc-empty {
+  text-align: center;
+  padding: 80px 20px;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+}
+.mc-empty-icon { font-size: 3rem; margin-bottom: 12px; }
+.mc-empty h3 { font-size: 1.2rem; font-weight: 700; color: #0f172a; margin: 0 0 6px; }
+.mc-empty p { color: #64748b; margin: 0; }
+
+/* Module list */
+.mc-module-list { display: flex; flex-direction: column; gap: 20px; }
+
+.mc-module-card {
+  background: white;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+
+.mc-module-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.mc-module-info { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+
+.mc-module-num {
+  background: #eff6ff;
+  color: #2563eb;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.mc-module-title { font-size: 1rem; font-weight: 700; color: #0f172a; margin: 0; }
+.mc-lesson-count {
+  font-size: 0.78rem;
+  color: #64748b;
+  background: #f8fafc;
+  padding: 2px 10px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.mc-add-lesson-btn {
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1.5px solid #bbf7d0;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.mc-add-lesson-btn:hover { background: #dcfce7; }
+
+/* Lesson list */
+.mc-lesson-list { padding: 0 24px 16px; border-top: 1px solid #f1f5f9; }
+
+.mc-lesson-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 0;
+  border-bottom: 1px solid #f8fafc;
+}
+.mc-lesson-item:last-child { border-bottom: none; }
+
+.mc-lesson-num {
+  width: 28px; height: 28px;
+  background: #f1f5f9;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.8rem; font-weight: 700; color: #475569;
+  flex-shrink: 0;
+}
+.mc-lesson-info { flex: 1; display: flex; flex-direction: column; gap: 3px; }
+.mc-lesson-title { font-size: 0.92rem; font-weight: 600; color: #1e293b; }
+.mc-lesson-meta { display: flex; gap: 12px; flex-wrap: wrap; }
+.mc-lesson-url { font-size: 0.75rem; color: #94a3b8; }
+.mc-lesson-pdf { font-size: 0.75rem; color: #16a34a; }
+.mc-lesson-order { font-size: 0.78rem; color: #94a3b8; font-weight: 600; }
+
+.mc-no-lessons {
+  padding: 16px 24px;
+  color: #94a3b8;
+  font-size: 0.88rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+/* ── Edit / Delete lesson buttons ── */
+.mc-lesson-btns {
+  display: flex; gap: 8px; flex-shrink: 0;
+}
+.mc-edit-lesson-btn {
+  padding: 5px 12px; border-radius: 7px;
+  background: #eff6ff; color: #2563eb;
+  border: 1.5px solid #bfdbfe;
+  font-size: 0.8rem; font-weight: 600; cursor: pointer;
+  transition: all 0.15s; white-space: nowrap;
+}
+.mc-edit-lesson-btn:hover { background: #dbeafe; }
+
+.mc-delete-lesson-btn {
+  padding: 5px 12px; border-radius: 7px;
+  background: #fff1f2; color: #e11d48;
+  border: 1.5px solid #fecdd3;
+  font-size: 0.8rem; font-weight: 600; cursor: pointer;
+  transition: all 0.15s; white-space: nowrap;
+}
+.mc-delete-lesson-btn:hover { background: #ffe4e6; }
+
+/* ── Edit Lesson Modal ── */
+.mc-modal-overlay {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,0.45);
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+}
+.mc-modal {
+  background: white; border-radius: 16px;
+  padding: 28px; width: 100%; max-width: 540px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+  display: flex; flex-direction: column; gap: 16px;
+}
+.mc-modal-header {
+  display: flex; justify-content: space-between; align-items: center;
+}
+.mc-modal-header h3 { font-size: 1.1rem; font-weight: 700; color: #0f172a; }
+.mc-modal-close {
+  background: none; border: none; font-size: 1.1rem;
+  cursor: pointer; color: #64748b; padding: 4px 8px;
+  border-radius: 6px;
+}
+.mc-modal-close:hover { background: #f1f5f9; }
+
+.mc-form-col {
+  display: flex; flex-direction: column; gap: 6px; width: 100%;
+}
+.mc-label {
+  font-size: 0.82rem; font-weight: 600; color: #475569;
+}
+.mc-existing-pdf {
+  font-size: 0.78rem; color: #16a34a; margin-top: 4px;
+}
+.mc-modal-actions {
+  display: flex; gap: 10px; justify-content: flex-end; margin-top: 4px;
+}
+.mc-cancel-btn {
+  padding: 9px 20px; border-radius: 8px;
+  background: #f1f5f9; color: #475569;
+  border: 1.5px solid #e2e8f0;
+  font-weight: 600; font-size: 0.88rem; cursor: pointer;
+}
+.mc-cancel-btn:hover { background: #e2e8f0; }

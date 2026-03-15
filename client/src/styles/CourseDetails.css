@@ -1,0 +1,69 @@
+.course-details {
+  max-width: 900px;
+  margin: auto;
+  padding: 2.5rem 1.5rem;
+}
+
+.course-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  color: #111827;
+}
+
+/* MODULE CARD */
+.module-card {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+}
+
+.module-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 1.5rem;
+  cursor: pointer;
+  background: #f9fafb;
+}
+
+.module-header h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.module-header span {
+  font-size: 1.5rem;
+  color: #2563eb;
+}
+
+/* LESSON LIST */
+.lesson-list {
+  padding: 1rem 1.5rem;
+}
+
+.lesson-item {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.6rem 0;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.lesson-item:hover {
+  color: #2563eb;
+}
+
+.lesson-dot {
+  font-size: 0.9rem;
+  color: #10b981;
+}
+
+.empty {
+  color: #9ca3af;
+  font-size: 0.9rem;
+  padding: 0.5rem 0;
+}

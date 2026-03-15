@@ -1,0 +1,57 @@
+.certificate-container {
+  padding: 40px;
+  background: white;
+  max-width: 800px;
+  margin: 40px auto;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius);
+}
+
+.certificate-border {
+  border: 10px solid var(--primary-light);
+  padding: 20px;
+}
+
+.certificate-content {
+  border: 2px solid var(--primary);
+  padding: 60px;
+  text-align: center;
+}
+
+.cert-header h1 {
+  color: var(--primary);
+  font-size: 2.2rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-top: 20px;
+}
+
+.student-name {
+  font-size: 2.5rem;
+  font-family: 'Inter', sans-serif;
+  color: var(--text-main);
+  margin: 20px 0;
+  text-decoration: underline;
+}
+
+.course-name {
+  font-size: 1.5rem;
+  color: var(--primary);
+  margin-bottom: 40px;
+}
+
+.cert-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+  border-top: 1px solid var(--border);
+  padding-top: 30px;
+}
+
+.footer-item label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-top: 5px;
+}
